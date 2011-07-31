@@ -1,0 +1,54 @@
+@import "classes";
+
+@startcolor: #f1f1f1;
+@endcolor: #fff;
+
+@fontcolor: #666;
+
+html {  
+    background: @endcolor;
+	color: @fontcolor;
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+body {    
+    .nomp;
+    .linear-gradient(@startcolor, @endcolor);
+}
+
+a {
+    color: #5a8cb9;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+        }
+    }
+
+#container {
+	margin: 0 auto;
+	width: 600px;
+    h1, h3 {
+        .nomp;
+        font-family: 'Gloria Hallelujah', Verdana, Arial, Sans-serif;
+        text-shadow: 1px 1px 3px lighten(@fontcolor, 20%);
+        } 
+    ul#feed {
+        .nomp;
+        li {
+            background-repeat: no-repeat;
+            background-position: 1em 0;
+            margin: 0 0 10px 0;
+            padding: 0 0 5px 95px;
+            list-style: none;
+            border-bottom: 1px dashed darken(@fontcolor, 20%);
+            &.lastfm {
+                background-image: url(../images/lastfm.png);
+                }
+            }
+            p.date {
+                color: lighten(@fontcolor, 20%);
+                font-size: 0.83em;
+                font-style: italic;
+                }
+        }   
+	}
