@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Last.fm Feed</title>	
-    <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet'>    
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>    
     <link rel="stylesheet/less" href="less/style.less" />    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script src="js/less-1.1.3.min.js"></script>
@@ -19,8 +19,8 @@
         
 		<ul id="feed">
 			<?php foreach($lastfm_data as $item): ?>
-				<li class="<?php echo $item['type']; ?>">
-					<p><a href="<?php echo $item['link']; ?>" title="<?php echo $item['title']; ?>"><?php echo $item['title']; ?></a></p>
+				<li class="lastfm">
+					<p><a href="<?php echo $item['link']; ?>" title="<?php echo $item['title']; ?>" target="_new"><?php echo $item['title']; ?></a></p>
 					<p class="date"><abbr class="timeago" title="<?php echo date('c', $item['date']); ?>"><?php echo date('r', $item['date']); ?></abbr></p>
 				</li>
 			<?php endforeach; ?>

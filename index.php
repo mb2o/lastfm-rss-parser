@@ -1,5 +1,6 @@
 <?php
 
+// error handling
 ini_set( 'display_errors', 1 );
 error_reporting( E_ALL );
 
@@ -17,8 +18,7 @@ foreach( $lastfm_xml->channel->item as $item )
 	$lastfm_item = array(
         'title' => $item->title,
 		'link' => $item->link,
-		'date' => strtotime($item->pubDate),
-		'type' => 'lastfm'
+		'date' => strtotime($item->pubDate)
 	);		
 	array_push( $lastfm_data, $lastfm_item );
     				
